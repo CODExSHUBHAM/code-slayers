@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link';
 
 function navbar() {
   return (
@@ -8,10 +9,10 @@ function navbar() {
       </div>
       <div>
         <ul className='flex font-bold justify-center '>
-          <li className='p-2'>Home</li>
-          <li className='p-2'>About</li>
-          <li className='p-2'>Blog</li>
-          <li className='p-2'>Contact</li>
+          <li className='p-2'><Link href='/'>Home</Link></li>
+          <li className='p-2'><Link href='/about'>About</Link></li>
+          <li className='p-2'><Link href='/blog'>Blog</Link></li>
+          <li className='p-2'><Link href='/contact'>Contact</Link></li>
         </ul>
       </div>
 
