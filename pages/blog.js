@@ -3,18 +3,10 @@ import Navbar from '@/components/Navbar/navbar';
 import Link from 'next/link';
 
 
-function Blog() {
+function Blog(props) {
 
-  const [blogs, setblogs] = useState([])
-
-  useEffect(() => {
-    console.log('hello')
-    fetch('http://localhost:3000/api/blogs')
-      .then((a) => { return a.json(); })
-      .then((data) => {
-        setblogs(data)
-      })
-  }, []);
+  // const [blogs, setblogs] = useState(props.allBlogs)
+  const blogs = (props.allBlogs)
 
   return (
     <>
@@ -24,7 +16,7 @@ function Blog() {
 
         {blogs.map((blogitem) => {
           return <div key={blogitem.slug} className='bg-blue-100 w-80 p-3 rounded-xl m-4'>
-            <Link href={'/blogpost/'+blogitem.slug}><h1 className='font-bold text-2xl mt-1'>{blogitem.title}</h1></Link>
+            <Link href={'/blogpost/' + blogitem.slug}><h1 className='font-bold text-2xl mt-1'>{blogitem.title}</h1></Link>
             <p className='mt-2'>{blogitem.content.substr(0, 250)}...</p>
           </div>
 
@@ -33,6 +25,14 @@ function Blog() {
       </div>
     </>
   )
+}
+
+export async function getServerSideProps(context) {
+  let data = await fetch('http://localhost:3000/api/blogs')
+  let allBlogs = await data.json()
+  return {
+    props: { allBlogs }, // will be passed to the page component as props
+  }
 }
 
 export default Blog
