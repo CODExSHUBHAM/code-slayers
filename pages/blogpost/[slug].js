@@ -3,21 +3,22 @@
 import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 
-function slug() {
+function slug(props) {
 
-  const router = useRouter();
-  const [blog, setblog] = useState()
+  const blog = (props.blog)
+  // const router = useRouter();
+  // const [blog, setblog] = useState()
 
-  useEffect(() => {
-    if (!router.isReady) return;
-    const { slug } = router.query;
-    fetch(`http://localhost:3000/api/getblog?slug=${slug}`)
-      .then((a) => { return a.json(); })
-      .then((data) => {
-        setblog(data)
-      })
+  // useEffect(() => {
+  //   if (!router.isReady) return;
+  //   const { slug } = router.query;
+  //   fetch(`http://localhost:3000/api/getblog?slug=${slug}`)
+  //     .then((a) => { return a.json(); })
+  //     .then((data) => {
+  //       setblog(data)
+  //     })
 
-  }, [router.isReady]);
+  // }, [router.isReady]);
 
   return (
 
@@ -30,6 +31,15 @@ function slug() {
     </div>
 
   )
+}
+
+export async function getServerSideProps(context) {
+  const { slug } = context.query;
+  let data = await fetch(`http://localhost:3000/api/getblog?slug=${slug}`);
+  let blog = await data.json();
+  return {
+    props: { blog }, // will be passed to the page component as props
+  }
 }
 
 export default slug
