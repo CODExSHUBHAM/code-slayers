@@ -2,6 +2,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
+import Navbar from '@/components/Navbar/navbar'
 
 function slug(props) {
 
@@ -22,13 +23,17 @@ function slug(props) {
 
   return (
 
-    <div className='p-8 justify-center'>
-      <div className='bg-blue-100 p-3 rounded-xl m-4'>
-        <h1 className='font-bold text-2xl mt-1'>{blog && blog.title}</h1>
-        <p className='mt-2'>{blog && blog.content}</p>
-        <p className='mt-2 font-bold'>Author: {blog && blog.author}</p>
+    <>
+      <Navbar />
+
+      <div className='p-8 justify-center'>
+        <div className='bg-blue-100 p-3 rounded-xl m-4'>
+          <h1 className='font-bold text-2xl mt-1'>{blog && blog.title}</h1>
+          <p className='mt-2'>{blog && blog.content}</p>
+          <p className='mt-2 font-bold'>Author: {blog && blog.author}</p>
+        </div>
       </div>
-    </div>
+    </>
 
   )
 }
