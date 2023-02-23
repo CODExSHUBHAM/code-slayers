@@ -1,11 +1,14 @@
 import React from 'react'
 import Link from 'next/link';
+import Image from 'next/image';
+import logo from '../../public/logo.png'
 
 function navbar() {
   return (
     <div className='flex justify-between items-center bg-slate-200 px-20 py-2'>
       <div className='items-center'>
-        <h1 className='text-2xl font-bold font-sans'><Link href='/'>codeSlayers</Link></h1>
+        {/* <h1 className='text-2xl font-bold font-sans'><Link href='/'>codeSlayers</Link></h1> */}
+        <Image src={logo} alt='logo' width={220} />
       </div>
       <div className='flex  items-center'>
         <input type="text" placeholder="search blogs" className='p-1 rounded-2xl border outline-none placeholder:text-md placeholder:text-center placeholder:text-black' />
