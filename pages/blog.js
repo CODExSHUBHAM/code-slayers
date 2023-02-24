@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar/navbar';
 import Link from 'next/link';
+import Footer from '@/components/Footer/footer';
 
 
 function Blog(props) {
@@ -23,6 +24,7 @@ function Blog(props) {
         })}
 
       </div>
+      <Footer />
     </>
   )
 }

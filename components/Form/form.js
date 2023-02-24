@@ -99,11 +99,7 @@ function Form() {
 
   return (
     <>
-      <div className='w-1/3 m-auto text-center py-10'>
-        <h1 className='font-bold text-4xl'>Reach Us</h1>
-        <p className='mt-5'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque saepe dignissimos ut voluptates ex nemo repellendus sunt reiciendis, repudiandae quia?</p>
-      </div>
-      <div className='w-1/3 mx-auto'>
+      <div className='w-2/5 mx-auto pb-10'>
         <form onSubmit={handleSubmit}>
           <div className='flex'>
             <div className='flex flex-col w-full p-2'>
@@ -128,8 +124,8 @@ function Form() {
             <p className="text-gray-700 text-sm font-bold p-1">{formErrors.checked}</p>
           </div>
           <div className='flex items-center'>
-            <button className="flex text-white bg-indigo-500 border-0 px-8 p-2 mx-2 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-              Button
+            <button className="flex text-white bg-primary border-0 px-8 p-2 mx-2 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+              SUBMIT
             </button>
             {isSubmitSucces && (<p className="mx-5 text-base text-green-300">Thanks for contacting Us</p>)}
             {isSubmitSucces === false && (<p className="mx-5 text-base text-red-400">Please try again!</p>)}
