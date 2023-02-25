@@ -5,7 +5,7 @@ import Footer from '@/components/Footer/footer'
 
 function contact() {
   return (
-    <>
+    <div className='bg-backdrop'>
       <Navbar />
       <div className='flex flex-col w-2/4 m-auto text-center py-10 items-center'>
         <h1 className='text-3xl font-primary font-medium text-primary'>Connect with us</h1>
@@ -14,7 +14,7 @@ function contact() {
       <Form />
       <Footer />
 
-    </>
+    </div>
   )
 }
 

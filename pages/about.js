@@ -4,11 +4,11 @@ import Footer from '@/components/Footer/footer'
 
 function about() {
   return (
-    <>
+    <div className='bg-backdrop'>
       <Navbar />
       <div>about</div>
       <Footer />
-    </>
+    </div>
   )
 }
 

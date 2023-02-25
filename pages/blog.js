@@ -10,7 +10,7 @@ function Blog(props) {
   const blogs = (props.allBlogs)
 
   return (
-    <>
+    <div className='bg-backdrop'>
       <Navbar />
 
       <div className='p-8 flex justify-center'>
@@ -25,7 +25,7 @@ function Blog(props) {
 
       </div>
       <Footer />
-    </>
+    </div>
   )
 }
 

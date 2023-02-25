@@ -6,7 +6,7 @@ import logo from '../../public/logo.png'
 
 function navbar() {
   return (
-    <div className='flex justify-between items-center bg-slate-200 px-20 py-2'>
+    <div className='flex justify-between items-center bg-blue-100 px-20 py-2'>
       <div className='items-center'>
         <a href="/"><Image src={logo} alt='logo' width={220} /></a>
       </div>
