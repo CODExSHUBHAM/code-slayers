@@ -1,3 +1,4 @@
+import AboutSection from '@/components/Sections/aboutSection'
 import FeaturedBlogs from '@/components/Sections/featuredBlogs'
 import HeroSection from '@/components/Sections/heroSection'
 import Head from 'next/head'
@@ -13,6 +14,7 @@ export default function Home() {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <HeroSection />
+        <AboutSection />
         <FeaturedBlogs />
       </section>
     </>

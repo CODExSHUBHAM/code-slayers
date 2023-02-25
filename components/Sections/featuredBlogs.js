@@ -4,7 +4,10 @@ import React from 'react'
 const FeaturedBlogs = () => {
   return (
     <>
-      <section className="text-gray-400 bg-gray-900 body-font">
+      <section className="text-gray-400 bg-gray-900 body-font text">
+        <div className='pt-10 text-center font-primary text-3xl text-white font-semibold'>
+          <h1>Explore some latest blogs</h1>
+        </div>
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-wrap -mx-4 -my-8">
             <div className="py-8 px-4 lg:w-1/3">
