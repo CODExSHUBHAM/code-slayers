@@ -4,9 +4,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import logo from '../../public/logo.png'
 
-function navbar() {
+const Navbar = () => {
   return (
-    <div className='flex justify-between items-center bg-secondary px-20 py-2'>
+    <div className='flex justify-between items-center bg-secondary px-20 py-2 shadow-md'>
       <div className='items-center'>
         <a href="/"><Image src={logo} alt='logo' width={220} /></a>
       </div>
@@ -23,4 +23,4 @@ function navbar() {
   );
 }
 
-export default navbar;
+export default Navbar;

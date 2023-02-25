@@ -2,9 +2,8 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
-import Navbar from '@/components/Navbar/navbar'
 
-function slug(props) {
+const slug = (props) => {
 
   const blog = (props.blog)
   // const router = useRouter();
@@ -24,8 +23,6 @@ function slug(props) {
   return (
 
     <>
-      <Navbar />
-
       <div className='p-8 justify-center'>
         <div className='bg-blue-100 p-3 rounded-xl m-4'>
           <h1 className='font-bold text-2xl mt-1'>{blog && blog.title}</h1>

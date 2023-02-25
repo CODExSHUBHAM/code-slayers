@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-function Form() {
+const Form = () => {
 
   const initialValues = { name: "", email: "", message: "" }
   const [formValues, setFormValues] = useState(initialValues)
