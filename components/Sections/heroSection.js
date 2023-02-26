@@ -6,7 +6,7 @@ const HeroSection = () => {
     <>
       <div className='bg-[url("../public/images/heroImg.jpg")] bg-fixed bg-cover bg-center min-h-screen'>
         <div className='bg-blue-900 bg-opacity-50 min-h-screen flex items-center justify-center backdrop-blur-sm'>
-          <h1 className='text-5xl font-bold text-secondary font-primary'>"Learn to Code - Discover Your Possibilities!"</h1>
+          <h1 className='typewriter text-5xl font-bold text-secondary font-primary'>"Learn to Code - Discover Your Possibilities!"</h1>
         </div>
       </div>
     </>
