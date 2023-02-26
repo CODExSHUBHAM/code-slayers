@@ -3,7 +3,7 @@ import Navbar from '@/components/Navbar/navbar';
 import Footer from '@/components/Footer/footer';
 
 export default function App({ Component, pageProps }) {
-  return <div className='bg-backdrop'>
+  return <div className='bg-backdrop overflow-hidden'>
     <Navbar />
     <Component {...pageProps} />
     <Footer />
