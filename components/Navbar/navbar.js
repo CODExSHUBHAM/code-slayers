@@ -39,7 +39,7 @@ const Navbar = () => {
           <div className='items-center'>
             <a href="/"><Image src={logo} alt='logo' width={220} /></a>
           </div>
-          <div onClick={toggleMenu}>
+          <div onClick={toggleMenu} className='md:hidden'>
             <span ref={open} className='text-2xl text-primary block'><GiHamburgerMenu /></span>
             <span ref={close} className='text-2xl text-primary hidden' ><GrClose /></span>
           </div>
