@@ -14,12 +14,14 @@ const Footer = () => {
           <h1 className='text-3xl text-primary font-primary font-semibold'>Want to write a blog?</h1>
           <p className='font-medium pt-2'>Submit your blog here, and become a CODESLAYER</p>
         </div>
-        <button className='flex items-center text-white bg-primary border-0 px-8 p-3 mx-2 focus:outline-none hover:bg-indigo-600 rounded text-xl'>Get Started <Image src={arrow} alt="arrow" width={20} height={20} className='ml-2 pt-1' /></button>
+        <Link href={'/submitblog'}>
+          <button className='flex items-center text-white bg-primary border-0 px-8 p-3 mx-2 focus:outline-none hover:bg-purple-900 rounded text-xl'>Get Started <Image src={arrow} alt="arrow" width={20} height={20} className='ml-2 pt-1' /></button>
+        </Link>
       </div>
       <div className='bg-dark h-96 flex flex-col justify-center items-center  px-20 pt-16 z-0'>
         <div className='flex py-10'>
           <div className='w-80 mb-32'>
-            <Image src={whiteLogo} alt='white-logo' />
+            <Link href={'/'}><Image src={whiteLogo} alt='white-logo' /></Link>
           </div>
           <div className='px-20 pb-2'>
             <h2 className='text-white font-medium text-lg'>Navigate</h2>
@@ -43,8 +45,8 @@ const Footer = () => {
             <h2 className='text-white font-medium text-lg'>Stay Up to Date</h2>
             <p className='w-48 text-secondary mt-4'>Subscribe our newsletter to get latest updates.</p>
             <div className='flex mt-4'>
-              <input placeholder='enter email to subscribe' type="email" name="email" id="news-letter-email" className='w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out' />
-              <button className='flex text-white bg-primary border-0 px-8 p-2 mx-2 focus:outline-none hover:bg-indigo-600 rounded text-md'>Subscibe</button>
+              <input placeholder='enter email to subscribe' type="email" name="email" id="news-letter-email" className='w-full bg-gray-100 rounded border border-gray-300 focus:border-purple-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out' />
+              <button className='flex text-white bg-primary border-0 px-8 p-2 mx-2 focus:outline-none hover:bg-purple-900 rounded text-md'>Subscibe</button>
             </div>
           </div>
         </div>

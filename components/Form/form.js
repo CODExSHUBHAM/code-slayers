@@ -104,18 +104,18 @@ const Form = () => {
           <div className='flex'>
             <div className='flex flex-col w-full p-2'>
               <label htmlFor="name" className='leading-7 text-sm text-black'>Name</label>
-              <input value={formValues.name} onChange={handleChange} type="text" id='name' name='name' placeholder='write your name' className='w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out' />
+              <input value={formValues.name} onChange={handleChange} type="text" id='name' name='name' placeholder='write your name' className='w-full bg-gray-100 rounded border border-gray-300 focus:border-purple-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out' />
               <p className="text-gray-700 text-sm font-bold">{formErrors.name}</p>
             </div>
             <div className='flex flex-col w-full p-2'>
               <label htmlFor="email" className='leading-7 text-sm text-black'>Email</label>
-              <input value={formValues.email} onChange={handleChange} type="email" name="email" id="email" placeholder='write your email' className='w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out' />
+              <input value={formValues.email} onChange={handleChange} type="email" name="email" id="email" placeholder='write your email' className='w-full bg-gray-100 rounded border border-gray-300 focus:border-purple-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out' />
               <p className="text-gray-700 text-sm font-bold">{formErrors.email}</p>
             </div>
           </div>
           <div className='flex flex-col p-2'>
             <label htmlFor="message" className='leading-7 text-sm text-black'>Message</label>
-            <textarea value={formValues.message} onChange={handleChange} name="message" id="message" placeholder='type your message here' className="w-full bg-gray-100 rounded border border-gray-300 focus:border-indigo-500 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out" />
+            <textarea value={formValues.message} onChange={handleChange} name="message" id="message" placeholder='type your message here' className="w-full bg-gray-100 rounded border border-gray-300 focus:border-purple-500 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out" />
             <p className="text-gray-700 text-sm font-bold">{formErrors.message}</p>
           </div>
           <div className="flex p-2 items-center">
@@ -124,7 +124,7 @@ const Form = () => {
             <p className="text-gray-700 text-sm font-bold p-1">{formErrors.checked}</p>
           </div>
           <div className='flex items-center'>
-            <button className="flex text-white bg-primary border-0 px-8 p-2 mx-2 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+            <button className="flex text-white bg-primary border-0 px-8 p-2 mx-2 focus:outline-none hover:bg-purple-900 rounded text-lg">
               SUBMIT
             </button>
             {isSubmitSucces && (<p className="mx-5 text-base text-green-300">Thanks for contacting Us</p>)}

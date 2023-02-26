@@ -4,7 +4,7 @@ import React from 'react'
 const FeaturedBlogs = () => {
   return (
     <>
-      <section className="text-gray-400 bg-gray-900 body-font text">
+      <section className="text-gray-400 bg-gray-900 body-font text pb-40">
         <div className='pt-10 text-center font-primary text-3xl text-white font-semibold'>
           <h1>Explore some latest blogs</h1>
         </div>
