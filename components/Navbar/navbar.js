@@ -3,6 +3,7 @@ import React from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
 import logo from '../../public/logo.png'
+import whitelogo from '../../public/White Logo.png'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { GrClose } from 'react-icons/gr'
 import { useRef } from 'react';
@@ -34,10 +35,10 @@ const Navbar = () => {
 
   return (
     <>
-      <div className='md:flex justify-between items-center bg-secondary p-4 md:px-20 md:py-2 shadow-md '>
+      <div className='md:flex justify-between items-center bg-gray-900 p-4 md:px-20 md:py-2 shadow-md '>
         <div className='flex justify-between items-center'>
           <div className='items-center'>
-            <a href="/"><Image src={logo} alt='logo' width={220} /></a>
+            <a href="/"><Image src={whitelogo} alt='logo' width={220} /></a>
           </div>
           <div onClick={toggleMenu} className='md:hidden'>
             <span ref={open} className='text-2xl text-primary block'><GiHamburgerMenu /></span>
@@ -45,11 +46,11 @@ const Navbar = () => {
           </div>
         </div>
         <div className='items-center hidden md:block'>
-          <ul className='flex font-medium justify-center font-primary text-primary'>
-            <li className='p-2 px-4 hover:underline'><Link href='/'>HOME</Link></li>
-            <li className='p-2 px-4 hover:underline'><Link href='/about'>ABOUT</Link></li>
-            <li className='p-2 px-4 hover:underline'><Link href='/blog'>BLOG</Link></li>
-            <li className='p-2 px-4 hover:underline'><Link href='/contact'>CONTACT</Link></li>
+          <ul className='flex font-medium justify-center font-primary text-gray-300'>
+            <li className='p-2 px-4 hover:underline hover:text-primary ease-in-out'><Link href='/'>HOME</Link></li>
+            <li className='p-2 px-4 hover:underline hover:text-primary ease-in-out'><Link href='/about'>ABOUT</Link></li>
+            <li className='p-2 px-4 hover:underline hover:text-primary ease-in-out'><Link href='/blog'>BLOG</Link></li>
+            <li className='p-2 px-4 hover:underline hover:text-primary ease-in-out'><Link href='/contact'>CONTACT</Link></li>
           </ul>
         </div>
         <div ref={ref} className='items-center bg-secondary absolute right-0 w-full top-15 z-10 p-4 hidden'>
