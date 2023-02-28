@@ -10,7 +10,7 @@ const Blog = (props) => {
 
   return (
     <>
-      <section className="text-gray-600 body-font md:px-10 pb-10">
+      <section className="text-gray-600 body-font md:px-10 pb-20">
         <div className="container px-5 py-24 mx-auto">
           <h1 className='text-3xl md:text-4xl font-primary font-semibold w-fit m-auto pb-10 text-primary'>EXPLORE ALL BLOG'S</h1>
           <div className="flex flex-wrap -m-4">
@@ -20,7 +20,7 @@ const Blog = (props) => {
                   <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
                   <h1 className="title-font sm:text-2xl text-xl font-medium text-white mb-3">{blogitem.title}</h1>
                   <p className="leading-relaxed mb-3 text-secondary">{blogitem.content.substr(0, 200)}...</p>
-                  <a className="text-indigo-500 inline-flex items-center"><Link href={'/blogpost/' + blogitem.slug}>Learn More</Link>
+                  <a className="text-indigo-500 inline-flex items-center"><Link href={'/blogpost/' + blogitem.slug}>Read More</Link>
                     <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
                       <path d="M5 12h14"></path>
                       <path d="M12 5l7 7-7 7"></path>
