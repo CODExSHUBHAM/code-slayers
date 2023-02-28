@@ -41,8 +41,8 @@ const Navbar = () => {
             <a href="/"><Image src={whitelogo} alt='logo' width={220} /></a>
           </div>
           <div onClick={toggleMenu} className='md:hidden'>
-            <span ref={open} className='text-2xl text-primary block'><GiHamburgerMenu /></span>
-            <span ref={close} className='text-2xl text-primary hidden' ><GrClose /></span>
+            <span ref={open} className='text-2xl text-gray-300 block'><GiHamburgerMenu /></span>
+            <span ref={close} className='text-2xl text-gray-300 hidden' ><GrClose /></span>
           </div>
         </div>
         <div className='items-center hidden md:block'>
@@ -53,8 +53,8 @@ const Navbar = () => {
             <li className='p-2 px-4 hover:underline hover:text-primary ease-in-out'><Link href='/contact'>CONTACT</Link></li>
           </ul>
         </div>
-        <div ref={ref} className='items-center bg-secondary absolute right-0 w-full top-15 z-10 p-4 hidden'>
-          <ul className='flex flex-col items-center font-medium text-xl justify-center font-primary tracking-widest text-primary'>
+        <div ref={ref} className='items-center bg-gray-800 absolute right-0 w-full top-14 z-10 p-4 hidden'>
+          <ul className='flex flex-col items-center font-medium text-xl justify-center font-primary tracking-widest text-gray-300'>
             <li className='p-2 px-4'><Link href='/'>HOME</Link></li>
             <li className='p-2 px-4'><Link href='/about'>ABOUT</Link></li>
             <li className='p-2 px-4'><Link href='/blog'>BLOG</Link></li>
