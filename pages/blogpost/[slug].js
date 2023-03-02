@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 
 const slug = (props) => {
 
-  const blog = (props.blog)
+  const blog = (props.blog[0])
   // const router = useRouter();
   // const [blog, setblog] = useState()
 

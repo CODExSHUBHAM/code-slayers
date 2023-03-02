@@ -1,11 +1,9 @@
-import * as fs from 'fs';
+import Blog from "@/models/blog";
+import connectDb from "@/middleware/connectDb";
 
-export default function handler(req, res) {
-
-  fs.readFile(`blogdata/${req.query.slug}.json`, 'utf-8', (err, data) => {
-    if (err) {
-      res.status(500).json({ "error": "content not found" })
-    }
-    res.status(200).json(JSON.parse(data))
-  })
+const handler = async (req, res) => {
+  let blog = await Blog.find({ slug: req.query.slug })
+  res.status(200).json(blog)
 }
+
+export default connectDb(handler);
