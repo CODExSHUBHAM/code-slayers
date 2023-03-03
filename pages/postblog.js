@@ -89,7 +89,7 @@ const Postblog = () => {
         </div>
         <div className='p-4'>
           <form onSubmit={submitForm}>
-            <div className='flex flex-col w-3/5 m-auto'>
+            <div className='flex flex-col md:w-3/5 m-auto'>
               <label htmlFor="title" className='leading-7 text-sm font-medium text-black tracking-wider'>Title</label>
               <input type="text" value={formValues.title} onChange={handleChange} name="title" id="title" className='w-full bg-gray-100 rounded border border-gray-300 focus:border-purple-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out' />
               <p className="text-gray-700 text-sm font-bold p-1">{formErrors.title}</p>

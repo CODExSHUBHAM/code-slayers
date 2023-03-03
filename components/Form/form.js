@@ -99,9 +99,9 @@ const Form = () => {
 
   return (
     <>
-      <div className='w-2/5 mx-auto pb-10'>
+      <div className='w-4/5 md:w-2/5 mx-auto pb-10'>
         <form onSubmit={handleSubmit}>
-          <div className='flex'>
+          <div className='flex flex-col md:flex-row'>
             <div className='flex flex-col w-full p-2'>
               <label htmlFor="name" className='leading-7 text-sm text-black'>Name</label>
               <input value={formValues.name} onChange={handleChange} type="text" id='name' name='name' placeholder='write your name' className='w-full bg-gray-100 rounded border border-gray-300 focus:border-purple-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out' />
