@@ -51,7 +51,7 @@ const Blog = (props) => {
 }
 
 export async function getServerSideProps(context) {
-  let data = await fetch('http://localhost:3000/api/fetchblogs')
+  let data = await fetch('https://codeslayers.vercel.app/api/fetchblogs')
   let allBlogs = await data.json()
   return {
     props: { allBlogs }, // will be passed to the page component as props

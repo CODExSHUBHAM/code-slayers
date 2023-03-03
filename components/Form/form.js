@@ -60,7 +60,7 @@ const Form = () => {
       let data;
       let error;
 
-      fetch('http://localhost:3000/api/postmessage', {
+      fetch('https://codeslayers.vercel.app/api/postmessage', {
         method: 'POST', // or 'PUT'
         headers: {
           'Content-Type': 'application/json',

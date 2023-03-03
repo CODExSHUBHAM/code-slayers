@@ -48,7 +48,7 @@ const Postblog = () => {
       let data;
       let error;
 
-      fetch('http://localhost:3000/api/postblogs', {
+      fetch('https://codeslayers.vercel.app/api/postblogs', {
         method: 'POST', // or 'PUT'
         headers: {
           'Content-Type': 'application/json',
