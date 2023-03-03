@@ -60,7 +60,7 @@ const Form = () => {
       let data;
       let error;
 
-      fetch('http://localhost:3000/api/contact', {
+      fetch('http://localhost:3000/api/postmessage', {
         method: 'POST', // or 'PUT'
         headers: {
           'Content-Type': 'application/json',
@@ -127,8 +127,8 @@ const Form = () => {
             <button className="flex text-white bg-primary border-0 px-8 p-2 mx-2 focus:outline-none hover:bg-purple-900 rounded text-lg">
               SUBMIT
             </button>
-            {isSubmitSucces && (<p className="mx-5 text-base text-green-300">Thanks for contacting Us</p>)}
-            {isSubmitSucces === false && (<p className="mx-5 text-base text-red-400">Please try again!</p>)}
+            {isSubmitSucces && (<p className="mx-5 text-base text-gray-700">Thanks for contacting Us</p>)}
+            {isSubmitSucces === false && (<p className="mx-5 text-base text-gray-700">Please try again!</p>)}
           </div>
         </form>
       </div>
