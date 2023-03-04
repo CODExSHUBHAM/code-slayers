@@ -49,7 +49,7 @@ const Navbar = () => {
           <ul className='flex font-medium justify-center font-primary text-gray-300'>
             <li className='p-2 px-4 hover:underline hover:text-primary ease-in-out'><Link href='/'>HOME</Link></li>
             <li className='p-2 px-4 hover:underline hover:text-primary ease-in-out'><Link href='/about'>ABOUT</Link></li>
-            <li className='p-2 px-4 hover:underline hover:text-primary ease-in-out'><Link href='/blog'>BLOG</Link></li>
+            <li className='p-2 px-4 hover:underline hover:text-primary ease-in-out'><Link href='/blogs'>BLOG</Link></li>
             <li className='p-2 px-4 hover:underline hover:text-primary ease-in-out'><Link href='/contact'>CONTACT</Link></li>
           </ul>
         </div>
@@ -57,7 +57,7 @@ const Navbar = () => {
           <ul className='flex flex-col items-center font-medium text-xl justify-center font-primary tracking-widest text-gray-300'>
             <li className='p-2 px-4'><Link href='/'>HOME</Link></li>
             <li className='p-2 px-4'><Link href='/about'>ABOUT</Link></li>
-            <li className='p-2 px-4'><Link href='/blog'>BLOG</Link></li>
+            <li className='p-2 px-4'><Link href='/blogs'>BLOG</Link></li>
             <li className='p-2 px-4'><Link href='/contact'>CONTACT</Link></li>
           </ul>
         </div>

@@ -1,12 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Blog from "@/models/blog";
+import mongoose from "mongoose";
 
-
-const Blog = (props) => {
+const Blogs = (props) => {
 
   // const [blogs, setblogs] = useState(props.allBlogs)
-  const blogs = (props.allBlogs)
+  const blogs = (props.blogs)
 
   return (
     <>
@@ -51,11 +52,16 @@ const Blog = (props) => {
 }
 
 export async function getServerSideProps(context) {
-  let data = await fetch('https://codeslayers.vercel.app/api/fetchblogs')
-  let allBlogs = await data.json()
+
+  const uri = process.env.MONGODB_URI
+
+  if (!mongoose.connections[0].readyState) {
+    await mongoose.connect(uri)
+  }
+  let blogs = await Blog.find()
   return {
-    props: { allBlogs }, // will be passed to the page component as props
+    props: { blogs: JSON.parse(JSON.stringify(blogs)) }, // will be passed to the page component as props
   }
 }
 
-export default Blog
+export default Blogs
